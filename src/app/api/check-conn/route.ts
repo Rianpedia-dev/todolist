@@ -5,7 +5,11 @@ import { RowDataPacket } from 'mysql2';
 export async function GET() {
     try {
         const connection = await pool.getConnection();
-        const [rows] = await connection.query<RowDataPacket[]>('SELECT 1 + 1 AS result');
+        // Menambahkan timeout 5 detik agar aplikasi tidak hang jika DB tidak merespons
+        const [rows] = await connection.query<RowDataPacket[]>({
+            sql: 'SELECT 1 + 1 AS result',
+            timeout: 5000
+        });
         connection.release();
 
         return NextResponse.json({
