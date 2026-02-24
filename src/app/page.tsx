@@ -1,6 +1,8 @@
 import { getTodos, addTodo, deleteTodo, toggleTodo } from './actions';
 import { Trash2, CheckCircle2, Circle, Plus } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const todos = await getTodos();
 
