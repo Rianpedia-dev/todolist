@@ -12,7 +12,7 @@ export default async function Home() {
           <h1 className="text-4xl font-extrabold text-[#1e293b] mb-2 tracking-tight">
             My Todo List
           </h1>
-          <p className="text-[#64748b] text-lg">Kelolaa tugas harian Anda dengan mudah.</p>
+          <p className="text-[#64748b] text-lg">Kelola tugas harian Anda dengan mudah.</p>
         </div>
 
         {/* Form Section */}
@@ -42,8 +42,8 @@ export default async function Home() {
               <div
                 key={todo.id}
                 className={`group flex items-center justify-between p-5 rounded-2xl border transition-all duration-300 ${todo.is_completed
-                    ? 'bg-emerald-50/50 border-emerald-100'
-                    : 'bg-white border-[#e2e8f0] hover:border-blue-200 hover:shadow-md'
+                  ? 'bg-emerald-50/50 border-emerald-100'
+                  : 'bg-white border-[#e2e8f0] hover:border-blue-200 hover:shadow-md'
                   }`}
               >
                 <div className="flex items-center gap-4 flex-1">
@@ -62,8 +62,8 @@ export default async function Home() {
                   </form>
                   <span
                     className={`text-lg transition-all ${todo.is_completed
-                        ? 'text-[#64748b] line-through italic'
-                        : 'text-[#334155] font-medium'
+                      ? 'text-[#64748b] line-through italic'
+                      : 'text-[#334155] font-medium'
                       }`}
                   >
                     {todo.task}
