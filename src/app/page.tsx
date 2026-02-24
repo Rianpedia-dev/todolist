@@ -12,7 +12,7 @@ export default async function Home() {
           <h1 className="text-4xl font-extrabold text-[#1e293b] mb-2 tracking-tight">
             My Todo List
           </h1>
-          <p className="text-[#64748b] text-lg">Kelola tugas harian Anda dengan mudah.</p>
+          <p className="text-[#64748b] text-lg">Kelolaa tugas harian Anda dengan mudah.</p>
         </div>
 
         {/* Form Section */}
